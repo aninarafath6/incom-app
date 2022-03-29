@@ -4,6 +4,9 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_colors.dart';
 import 'package:incom/constants/app_images.dart';
 import 'package:incom/constants/app_sizes.dart';
+import 'package:incom/views/authentication_view/screens/login_screen.dart';
+
+import '../widgets/custom_button.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({Key? key}) : super(key: key);
@@ -31,7 +34,9 @@ class OnboardingView extends StatelessWidget {
               const Spacer(flex: 2),
               CustomButton(
                 label: 'Get Started',
-                onTap: () {},
+                onTap: () {
+                  Navigator.of(context).pushNamed(LoginScreen.routeName);
+                },
               ),
               const Spacer(flex: 2),
               Row(
@@ -46,44 +51,6 @@ class OnboardingView extends StatelessWidget {
                 ],
               ),
             ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class CustomButton extends StatelessWidget {
-  const CustomButton({
-    Key? key,
-    required this.label,
-    this.onTap,
-  }) : super(key: key);
-
-  final String label;
-  final Function()? onTap;
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      width: AppSizes.buttonWidth,
-      height: AppSizes.buttonHeight,
-      child: InkWell(
-        onTap: onTap,
-        child: Container(
-          decoration: BoxDecoration(
-            color: AppColors.primaryColor,
-            borderRadius: BorderRadius.circular(30),
-          ),
-          child: Center(
-            child: Text(
-              label,
-              style: GoogleFonts.openSans(
-                fontWeight: FontWeight.w700,
-                color: AppColors.light,
-                fontSize: 18,
-              ),
-            ),
           ),
         ),
       ),

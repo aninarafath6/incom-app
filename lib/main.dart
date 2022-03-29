@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:incom/constants/app_colors.dart';
-import 'package:incom/views/onboarding_view/onboarding_screen.dart';
+import 'package:incom/utils/routs.dart';
+// import 'package:incom/views/onboarding_view/onboarding_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,7 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Income',
-      home: const OnboardingView(),
+      // home: const OnboardingView(),
+      onGenerateRoute: Routes.onRouteGenerate,
       theme: ThemeData(
         scaffoldBackgroundColor: AppColors.light,
         primarySwatch: Colors.blue,
