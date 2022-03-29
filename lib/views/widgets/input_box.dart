@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_colors.dart';
 
-class InputBox extends StatelessWidget {
+class InputBox extends StatefulWidget {
   const InputBox({
     Key? key,
     required this.placeholder,
@@ -10,6 +10,13 @@ class InputBox extends StatelessWidget {
   }) : super(key: key);
   final String placeholder;
   final bool password;
+
+  @override
+  State<InputBox> createState() => _InputBoxState();
+}
+
+class _InputBoxState extends State<InputBox> {
+  late bool secure = widget.password;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,12 +30,24 @@ class InputBox extends StatelessWidget {
       ),
       child: Center(
         child: TextField(
+          obscureText: secure,
+          cursorColor: Colors.black,
           decoration: InputDecoration(
-            suffixIcon: password
-                ? const Icon(Icons.visibility_outlined)
+            suffixIconColor: AppColors.brownShade,
+            suffixIcon: widget.password
+                ? GestureDetector(
+                    onTap: () => setState(
+                      () => secure = !secure,
+                    ),
+                    child: Icon(
+                        secure
+                            ? Icons.visibility_outlined
+                            : Icons.visibility_off_outlined,
+                        color: AppColors.brownShade),
+                  )
                 : const SizedBox(),
             border: InputBorder.none,
-            hintText: placeholder,
+            hintText: widget.placeholder,
             hintStyle: GoogleFonts.openSans(
               color: AppColors.brownShade,
             ),
