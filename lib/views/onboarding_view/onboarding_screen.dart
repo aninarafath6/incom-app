@@ -4,8 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_colors.dart';
 import 'package:incom/constants/app_images.dart';
 import 'package:incom/constants/app_sizes.dart';
-import 'package:incom/views/authentication_view/screens/login_screen.dart';
 
+import '../authentication_view/login_screen/login_screen.dart';
 import '../widgets/custom_button.dart';
 
 class OnboardingView extends StatelessWidget {
@@ -31,7 +31,8 @@ class OnboardingView extends StatelessWidget {
                   // scale: 3,
                 ),
               ),
-              const Spacer(flex: 2),
+              const Spacer(flex: 1),
+              const SizedBox(height: 50),
               CustomButton(
                 label: 'Get Started',
                 onTap: () {

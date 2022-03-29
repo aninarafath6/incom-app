@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:incom/constants/app_colors.dart';
 
-import '../../constants/app_images.dart';
+import '../../../constants/app_images.dart';
 
 class LoginHeader extends StatelessWidget {
   const LoginHeader({
@@ -16,9 +16,9 @@ class LoginHeader extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Transform.translate(
-            offset: const Offset(55, 25),
+            offset: const Offset(58, 25),
             child: CircleAvatar(
-              backgroundColor: AppColors.light,
+              backgroundColor: Colors.transparent,
               backgroundImage: const AssetImage(
                 AppImages.login2,
               ),
@@ -29,11 +29,11 @@ class LoginHeader extends StatelessWidget {
                   height: double.infinity,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(97),
-                    color: AppColors.pink,
+                    color: Color.fromARGB(227, 203, 192, 212),
                   ),
                 ),
               ),
-              radius: 97,
+              radius: 100,
             ),
           ),
           Transform.translate(
@@ -43,7 +43,7 @@ class LoginHeader extends StatelessWidget {
               backgroundImage: AssetImage(
                 AppImages.login1,
               ),
-              radius: 112.5,
+              radius: 125.5,
             ),
           ),
           Transform.translate(
@@ -66,7 +66,7 @@ class LoginHeader extends StatelessWidget {
                     AppImages.slogo,
                   ),
                 ),
-                radius: 60,
+                radius: 65,
               ),
             ),
           ),

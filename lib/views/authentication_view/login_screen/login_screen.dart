@@ -2,10 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_colors.dart';
 import 'package:incom/constants/app_sizes.dart';
+import 'package:incom/views/authentication_view/sign_up_screens/signup_screen.dart';
 import 'package:incom/views/widgets/custom_button.dart';
 
-import '../../widgets/input_box.dart';
-import '../../widgets/login_header.dart';
+import '../widgets/input_box.dart';
+import '../widgets/login_header.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -68,29 +69,42 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 35,
                   ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        'Don’t have an account? ',
-                        style:
-                            GoogleFonts.openSans(color: AppColors.brownShade),
-                      ),
-                      Text(
-                        'Sign Up ',
-                        style: GoogleFonts.openSans(
-                          color: AppColors.primaryColor,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ],
-                  )
+                  const Footer()
                 ],
               ),
             ),
           ),
         ),
       ),
+    );
+  }
+}
+
+class Footer extends StatelessWidget {
+  const Footer({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text(
+          'Don’t have an account? ',
+          style: GoogleFonts.openSans(color: AppColors.brownShade),
+        ),
+        GestureDetector(
+          onTap: () => Navigator.of(context).pushNamed(SignUpScreen.routeName),
+          child: Text(
+            'Sign Up ',
+            style: GoogleFonts.openSans(
+              color: AppColors.primaryColor,
+              fontSize: 14,
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
