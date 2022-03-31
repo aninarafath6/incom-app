@@ -53,25 +53,7 @@ class SignUpScreen extends StatelessWidget {
                   placeholder: 'Password',
                   password: true,
                 ),
-                Row(
-                  children: [
-                    Checkbox(value: false, onChanged: (val) {}),
-                    Text(
-                      ' I agree to the  ',
-                      style: GoogleFonts.openSans(
-                        color: AppColors.brownShade,
-                        fontSize: 14,
-                      ),
-                    ),
-                    Text(
-                      ' Privacy Policy ',
-                      style: GoogleFonts.openSans(
-                        color: AppColors.primaryColor,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ],
-                ),
+                const PrivacyVerification(),
                 const SizedBox(
                   height: 50,
                 ),
@@ -85,6 +67,49 @@ class SignUpScreen extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+class PrivacyVerification extends StatefulWidget {
+  const PrivacyVerification({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  State<PrivacyVerification> createState() => _PrivacyVerificationState();
+}
+
+class _PrivacyVerificationState extends State<PrivacyVerification> {
+  late bool agree = false;
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Checkbox(
+            // checkColor: AppColors.primaryColor,
+            fillColor: MaterialStateProperty.all(AppColors.primaryColor),
+            value: agree,
+            onChanged: (val) {
+              setState(() {
+                agree = val!;
+              });
+            }),
+        Text(
+          ' I agree to the  ',
+          style: GoogleFonts.openSans(
+            color: AppColors.brownShade,
+            fontSize: 14,
+          ),
+        ),
+        Text(
+          ' Privacy Policy ',
+          style: GoogleFonts.openSans(
+            color: AppColors.primaryColor,
+            fontSize: 14,
+          ),
+        ),
+      ],
     );
   }
 }
