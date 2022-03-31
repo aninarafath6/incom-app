@@ -4,6 +4,7 @@ import 'package:incom/constants/app_colors.dart';
 import 'package:incom/constants/app_images.dart';
 import 'package:incom/constants/app_sizes.dart';
 import 'package:incom/utils/dimension.dart';
+import 'package:incom/views/authentication_view/reset_password/reset_password_screen.dart';
 import 'package:incom/views/widgets/custom_button.dart';
 
 class VerifyOtp extends StatelessWidget {
@@ -60,7 +61,12 @@ class VerifyOtp extends StatelessWidget {
                     ],
                   ),
                   context.spacing(height: 5),
-                  const CustomButton(label: 'Verify'),
+                  CustomButton(
+                    label: 'Verify',
+                    onTap: () => Navigator.of(context).pushNamed(
+                      ResetPassword.routeName,
+                    ),
+                  ),
                   context.spacing(height: 5),
                   Text(
                     'Resend OTP',
