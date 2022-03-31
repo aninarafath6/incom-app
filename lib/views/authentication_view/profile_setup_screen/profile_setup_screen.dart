@@ -17,20 +17,23 @@ class ProfileSetup extends StatelessWidget {
       body: Column(
         children: [
           const ProfileAppBar(),
-          Padding(
-            padding: const EdgeInsets.all(AppSizes.defaultPaddings),
-            child: Expanded(
-              flex: 1,
-              child: Column(
-                children: [
-                  context.spacing(height: 3),
-                  const SubTitle(title: 'Complete your profile'),
-                  context.spacing(height: 8),
-                  const InputBox(placeholder: 'Name'),
-                  const InputBox(placeholder: 'Email ID'),
-                  context.spacing(height: 7),
-                  const CustomButton(label: 'Next'),
-                ],
+          Expanded(
+            flex: 1,
+            child: Transform.translate(
+              offset: const Offset(0, -100),
+              child: Padding(
+                padding: const EdgeInsets.all(AppSizes.defaultPaddings),
+                child: Column(
+                  children: [
+                    context.spacing(height: 3),
+                    const SubTitle(title: 'Complete your profile'),
+                    context.spacing(height: 8),
+                    const InputBox(placeholder: 'Name'),
+                    const InputBox(placeholder: 'Email ID'),
+                    context.spacing(height: 7),
+                    const CustomButton(label: 'Next'),
+                  ],
+                ),
               ),
             ),
           )
