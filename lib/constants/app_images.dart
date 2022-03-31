@@ -9,4 +9,5 @@ class AppImages {
   static const String forgotVector = 'assets/images/forgot.png';
   static const String signup1 = 'assets/images/signup1.png';
   static const String msgIcon = 'assets/icons/msgVector.png';
+  static const String verifyIcon = 'assets/icons/verify.png';
 }

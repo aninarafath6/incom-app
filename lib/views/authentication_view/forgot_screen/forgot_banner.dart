@@ -9,37 +9,35 @@ class ForgotBanner extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Flexible(
-      child: Column(
-        children: [
-          CircleAvatar(
-            backgroundColor: const Color.fromARGB(0, 255, 255, 255),
-            radius: 100,
-            backgroundImage: const AssetImage(AppImages.forgotVector),
-            child: Container(
-              decoration: BoxDecoration(
-                color: const Color.fromARGB(141, 207, 174, 245),
-                borderRadius: BorderRadius.circular(100),
-              ),
-              child: Center(
-                child: Image.asset(
-                  AppImages.msgIcon,
-                  width: 75,
-                ),
+    return Column(
+      children: [
+        CircleAvatar(
+          backgroundColor: const Color.fromARGB(0, 255, 255, 255),
+          radius: 100,
+          backgroundImage: const AssetImage(AppImages.forgotVector),
+          child: Container(
+            decoration: BoxDecoration(
+              color: const Color.fromARGB(141, 207, 174, 245),
+              borderRadius: BorderRadius.circular(100),
+            ),
+            child: Center(
+              child: Image.asset(
+                AppImages.msgIcon,
+                width: 75,
               ),
             ),
           ),
-          const SizedBox(height: 20),
-          Text(
-            'Message Sent!',
-            style: GoogleFonts.openSans(
-              color: Colors.black,
-              fontSize: 27,
-              fontWeight: FontWeight.w700,
-            ),
-          )
-        ],
-      ),
+        ),
+        const SizedBox(height: 20),
+        Text(
+          'Message Sent!',
+          style: GoogleFonts.openSans(
+            color: Colors.black,
+            fontSize: 27,
+            fontWeight: FontWeight.w700,
+          ),
+        )
+      ],
     );
   }
 }
