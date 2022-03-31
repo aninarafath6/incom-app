@@ -12,4 +12,5 @@ class AppImages {
   static const String verifyIcon = 'assets/icons/verify.png';
   static const String profileAppBar = 'assets/images/profileAppbar.png';
   static const String avatar = 'assets/images/avatar.png';
+  static const String lineVector = 'assets/icons/Line 1.png';
 }

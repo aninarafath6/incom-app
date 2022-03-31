@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:incom/constants/app_images.dart';
 import 'package:incom/constants/app_sizes.dart';
 import 'package:incom/utils/dimension.dart';
+import 'package:incom/views/authentication_view/connect_with_brocker/connect_with_broker.dart';
 import 'package:incom/views/authentication_view/profile_setup_screen/profile_app_bar.dart';
 import 'package:incom/views/authentication_view/widgets/input_box.dart';
 import 'package:incom/views/authentication_view/widgets/sub_title.dart';
@@ -31,7 +32,12 @@ class ProfileSetup extends StatelessWidget {
                     const InputBox(placeholder: 'Name'),
                     const InputBox(placeholder: 'Email ID'),
                     context.spacing(height: 7),
-                    const CustomButton(label: 'Next'),
+                    CustomButton(
+                      label: 'Next',
+                      onTap: () => Navigator.of(context).pushNamed(
+                        ConnectWithBroker.routeName,
+                      ),
+                    ),
                   ],
                 ),
               ),
