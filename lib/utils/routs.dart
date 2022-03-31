@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incom/views/authentication_view/forgot_screen/forgot_screen.dart';
+import 'package:incom/views/authentication_view/profile_setup_screen/profile_setup_screen.dart';
 import 'package:incom/views/authentication_view/reset_password/reset_password_screen.dart';
 import 'package:incom/views/authentication_view/verify_otp/verify_otp.dart';
 import '../views/authentication_view/login_screen/login_screen.dart';
@@ -19,6 +20,8 @@ class Routes {
         return MaterialPageRoute(builder: (context) => const VerifyOtp());
       case ResetPassword.routeName:
         return MaterialPageRoute(builder: (context) => const ResetPassword());
+      case ProfileSetup.routeName:
+        return MaterialPageRoute(builder: (context) => const ProfileSetup());
       default:
         return MaterialPageRoute(builder: (context) => const OnboardingView());
     }

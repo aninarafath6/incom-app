@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_colors.dart';
 import 'package:incom/views/authentication_view/login_screen/login_screen.dart';
+import 'package:incom/views/authentication_view/profile_setup_screen/profile_setup_screen.dart';
 import 'package:incom/views/authentication_view/sign_up_screens/sign_up_header.dart';
+import 'package:incom/views/authentication_view/widgets/sub_title.dart';
 import 'package:incom/views/widgets/custom_button.dart';
 
 import '../../../constants/app_sizes.dart';
@@ -36,13 +38,7 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(height: 25),
                 const SignUpHeader(),
                 const SizedBox(height: 40),
-                Text(
-                  'Sign Up',
-                  style: GoogleFonts.openSans(
-                    fontWeight: FontWeight.w700,
-                    fontSize: 27,
-                  ),
-                ),
+                const SubTitle(title: 'Signup'),
                 const SizedBox(
                   height: 40,
                 ),
@@ -58,11 +54,15 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(
                   height: 50,
                 ),
-                const CustomButton(label: 'Sign Up'),
+                CustomButton(
+                  label: 'Sign Up',
+                  onTap: () =>
+                      Navigator.of(context).pushNamed(ProfileSetup.routeName),
+                ),
                 const SizedBox(
                   height: 35,
                 ),
-                const Footer()
+                const _Footer()
               ],
             ),
           ),
@@ -115,8 +115,8 @@ class _PrivacyVerificationState extends State<PrivacyVerification> {
   }
 }
 
-class Footer extends StatelessWidget {
-  const Footer({
+class _Footer extends StatelessWidget {
+  const _Footer({
     Key? key,
   }) : super(key: key);
 
@@ -133,7 +133,7 @@ class Footer extends StatelessWidget {
           onTap: () =>
               Navigator.of(context).pushReplacementNamed(LoginScreen.routeName),
           child: Text(
-            'Log in ',
+            'Login ',
             style: GoogleFonts.openSans(
               color: AppColors.primaryColor,
               fontSize: 14,

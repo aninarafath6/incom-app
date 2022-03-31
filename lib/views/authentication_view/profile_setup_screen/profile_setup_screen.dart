@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:incom/constants/app_images.dart';
+import 'package:incom/constants/app_sizes.dart';
+import 'package:incom/utils/dimension.dart';
+import 'package:incom/views/authentication_view/profile_setup_screen/profile_app_bar.dart';
+import 'package:incom/views/authentication_view/widgets/input_box.dart';
+import 'package:incom/views/authentication_view/widgets/sub_title.dart';
+import 'package:incom/views/widgets/custom_button.dart';
+
+class ProfileSetup extends StatelessWidget {
+  const ProfileSetup({Key? key}) : super(key: key);
+  static const String routeName = '/profileSetup';
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: Column(
+        children: [
+          const ProfileAppBar(),
+          Padding(
+            padding: const EdgeInsets.all(AppSizes.defaultPaddings),
+            child: Expanded(
+              flex: 1,
+              child: Column(
+                children: [
+                  context.spacing(height: 3),
+                  const SubTitle(title: 'Complete your profile'),
+                  context.spacing(height: 8),
+                  const InputBox(placeholder: 'Name'),
+                  const InputBox(placeholder: 'Email ID'),
+                  context.spacing(height: 7),
+                  const CustomButton(label: 'Next'),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+}

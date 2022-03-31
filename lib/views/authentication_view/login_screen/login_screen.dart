@@ -3,8 +3,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_colors.dart';
 import 'package:incom/constants/app_sizes.dart';
 import 'package:incom/views/authentication_view/forgot_screen/forgot_screen.dart';
+import 'package:incom/views/authentication_view/login_screen/footer.dart';
+import 'package:incom/views/authentication_view/profile_setup_screen/profile_setup_screen.dart';
 import 'package:incom/views/authentication_view/widgets/headline.dart';
-import 'package:incom/views/authentication_view/sign_up_screens/signup_screen.dart';
+import 'package:incom/views/authentication_view/widgets/sub_title.dart';
 import 'package:incom/views/widgets/custom_button.dart';
 
 import '../widgets/input_box.dart';
@@ -40,13 +42,7 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(height: 25),
                   const LoginHeader(),
                   const SizedBox(height: 40),
-                  Text(
-                    'Login',
-                    style: GoogleFonts.openSans(
-                      fontWeight: FontWeight.w700,
-                      fontSize: 27,
-                    ),
-                  ),
+                  const SubTitle(title: 'Login'),
                   const SizedBox(
                     height: 40,
                   ),
@@ -75,11 +71,13 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 50,
                   ),
-                  const CustomButton(label: 'Login'),
+                  const CustomButton(
+                    label: 'Login',
+                  ),
                   const SizedBox(
                     height: 35,
                   ),
-                  const Footer()
+                  const Footer(),
                 ],
               ),
             ),

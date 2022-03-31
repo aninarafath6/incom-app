@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_images.dart';
+import 'package:incom/views/authentication_view/widgets/sub_title.dart';
 
 class ForgotBanner extends StatelessWidget {
   const ForgotBanner({
@@ -29,14 +29,7 @@ class ForgotBanner extends StatelessWidget {
           ),
         ),
         const SizedBox(height: 20),
-        Text(
-          'Message Sent!',
-          style: GoogleFonts.openSans(
-            color: Colors.black,
-            fontSize: 27,
-            fontWeight: FontWeight.w700,
-          ),
-        )
+        const SubTitle(title: 'Message Sent!'),
       ],
     );
   }

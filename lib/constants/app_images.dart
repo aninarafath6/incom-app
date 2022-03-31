@@ -10,4 +10,6 @@ class AppImages {
   static const String signup1 = 'assets/images/signup1.png';
   static const String msgIcon = 'assets/icons/msgVector.png';
   static const String verifyIcon = 'assets/icons/verify.png';
+  static const String profileAppBar = 'assets/images/profileAppbar.png';
+  static const String avatar = 'assets/images/avatar.png';
 }

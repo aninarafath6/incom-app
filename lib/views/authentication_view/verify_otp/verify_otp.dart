@@ -5,6 +5,8 @@ import 'package:incom/constants/app_images.dart';
 import 'package:incom/constants/app_sizes.dart';
 import 'package:incom/utils/dimension.dart';
 import 'package:incom/views/authentication_view/reset_password/reset_password_screen.dart';
+import 'package:incom/views/authentication_view/verify_otp/otp_input.dart';
+import 'package:incom/views/authentication_view/widgets/sub_title.dart';
 import 'package:incom/views/widgets/custom_button.dart';
 
 class VerifyOtp extends StatelessWidget {
@@ -41,14 +43,7 @@ class VerifyOtp extends StatelessWidget {
               padding: const EdgeInsets.all(AppSizes.defaultPaddings),
               child: Column(
                 children: [
-                  Text(
-                    'Enter the 4 digit OTP',
-                    style: GoogleFonts.openSans(
-                      color: Colors.black,
-                      fontWeight: FontWeight.w700,
-                      fontSize: 27,
-                    ),
-                  ),
+                  const SubTitle(title: 'Enter the 4 digit OTP'),
                   context.spacing(height: 5),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -80,54 +75,6 @@ class VerifyOtp extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-class OtpInput extends StatelessWidget {
-  const OtpInput({
-    Key? key,
-    this.first = false,
-    this.last = false,
-  }) : super(key: key);
-  final bool first, last;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: 60,
-      height: 60,
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(30),
-        color: const Color.fromARGB(57, 149, 149, 149),
-      ),
-      child: Center(
-        child: TextField(
-          onChanged: (val) {
-            if (val.length == 1 && last == false) {
-              FocusScope.of(context).nextFocus();
-            }
-            if (val.isEmpty && first == false) {
-              FocusScope.of(context).previousFocus();
-            }
-          },
-          // maxLength: 1,
-          textAlign: TextAlign.center,
-          showCursor: false,
-          readOnly: false,
-          autofocus: true,
-          decoration: InputDecoration(
-            border: InputBorder.none,
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(30),
-              borderSide: const BorderSide(
-                color: AppColors.lightPrimaryColor,
-                width: 3,
-              ),
-            ),
-          ),
-        ),
       ),
     );
   }

@@ -5,9 +5,9 @@ import 'package:incom/constants/app_images.dart';
 import 'package:incom/constants/app_sizes.dart';
 import 'package:incom/utils/dimension.dart';
 import 'package:incom/views/authentication_view/login_screen/login_screen.dart';
-import 'package:incom/views/authentication_view/sign_up_screens/signup_screen.dart';
 import 'package:incom/views/authentication_view/widgets/headline.dart';
 import 'package:incom/views/authentication_view/widgets/input_box.dart';
+import 'package:incom/views/authentication_view/widgets/sub_title.dart';
 import 'package:incom/views/widgets/custom_button.dart';
 
 class ResetPassword extends StatelessWidget {
@@ -36,14 +36,7 @@ class ResetPassword extends StatelessWidget {
                   width: 140,
                 ),
                 context.spacing(height: 5),
-                Text(
-                  'Enter New Password',
-                  style: GoogleFonts.openSans(
-                    color: Colors.black,
-                    fontSize: 27,
-                    fontWeight: FontWeight.w700,
-                  ),
-                ),
+                const SubTitle(title: 'Enter New Password'),
                 context.spacing(height: 3),
                 const InputBox(
                   placeholder: 'New Password',
