@@ -6,10 +6,12 @@ class InputBox extends StatefulWidget {
   const InputBox({
     Key? key,
     required this.placeholder,
+    this.keyboard = TextInputType.text,
     this.password = false,
   }) : super(key: key);
   final String placeholder;
   final bool password;
+  final TextInputType keyboard;
 
   @override
   State<InputBox> createState() => _InputBoxState();
@@ -30,6 +32,7 @@ class _InputBoxState extends State<InputBox> {
       ),
       child: Center(
         child: TextField(
+          keyboardType: widget.keyboard,
           obscureText: secure,
           cursorColor: Colors.black,
           decoration: InputDecoration(

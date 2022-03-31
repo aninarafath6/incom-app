@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_colors.dart';
 import 'package:incom/views/authentication_view/login_screen/login_screen.dart';
-import 'package:incom/views/authentication_view/widgets/sign_up_header.dart';
+import 'package:incom/views/authentication_view/sign_up_screens/sign_up_header.dart';
 import 'package:incom/views/widgets/custom_button.dart';
 
 import '../../../constants/app_sizes.dart';
@@ -48,6 +48,7 @@ class SignUpScreen extends StatelessWidget {
                 ),
                 const InputBox(
                   placeholder: 'Mobile Number',
+                  keyboard: TextInputType.number,
                 ),
                 const InputBox(
                   placeholder: 'Password',
