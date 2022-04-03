@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_colors.dart';
 import 'package:incom/constants/app_images.dart';
 import 'package:incom/constants/app_sizes.dart';
+import 'package:incom/controllers/connect_broker/connect_broker.dart';
 import 'package:incom/utils/dimension.dart';
+import 'package:incom/views/authentication_view/connect_with_brocker/broker_item.dart';
 import 'package:incom/views/authentication_view/widgets/sub_title.dart';
 
 class ConnectWithBroker extends StatelessWidget {
@@ -27,57 +30,12 @@ class ConnectWithBroker extends StatelessWidget {
               context.spacing(height: 7),
               Expanded(
                 child: Container(
-                  padding: EdgeInsets.all(padding - 10),
+                  padding: EdgeInsets.symmetric(horizontal: padding - 10),
                   decoration: BoxDecoration(
                     color: AppColors.pink,
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: ListView(
-                    children: [
-                      Center(
-                        child: Text(
-                          'Connect With',
-                          style: GoogleFonts.openSans(
-                            fontWeight: FontWeight.w700,
-                            fontSize: 20,
-                          ),
-                        ),
-                      ),
-                      context.spacing(height: 5),
-                      Stack(
-                        alignment: Alignment.centerLeft,
-                        children: [
-                          Container(
-                            width: double.infinity,
-                            height: 50,
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius: BorderRadius.circular(40),
-                            ),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
-                                const SizedBox(width: 80),
-                                Text('upstox',
-                                    style: GoogleFonts.openSans(
-                                        color: Colors.black, fontSize: 16)),
-                                IconButton(
-                                  icon: const Icon(
-                                    Icons.arrow_forward_ios,
-                                  ),
-                                  onPressed: () {},
-                                ),
-                              ],
-                            ),
-                          ),
-                          const CircleAvatar(
-                            radius: 35,
-                            backgroundColor: Colors.white,
-                          ),
-                        ],
-                      ),
-                    ],
-                  ),
+                  child: BrokerList(),
                 ),
               ),
               context.spacing(height: 3),
@@ -98,6 +56,53 @@ class ConnectWithBroker extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+// ignore: must_be_immutable
+class BrokerList extends StatelessWidget {
+  BrokerList({
+    Key? key,
+  }) : super(key: key);
+
+  ConnectBrokerController brokerController = Get.put(ConnectBrokerController());
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Column(
+          children: [
+            context.spacing(height: 2),
+            Center(
+              child: Text(
+                'Connect With',
+                style: GoogleFonts.openSans(
+                  fontWeight: FontWeight.w700,
+                  fontSize: 20,
+                ),
+              ),
+            ),
+            context.spacing(height: 3),
+          ],
+        ),
+        Flexible(
+          child: GetX<ConnectBrokerController>(builder: (context) {
+            brokerController.getBrokers();
+            return ListView.separated(
+              separatorBuilder: (context, index) => const SizedBox(height: 20),
+              itemCount: brokerController.brokerList.length,
+              itemBuilder: (context, index) {
+                return BrokerItem(
+                  title: brokerController.brokerList[index].name,
+                  image: brokerController.brokerList[index].imageURL,
+                );
+              },
+            );
+          }),
+        ),
+      ],
     );
   }
 }
