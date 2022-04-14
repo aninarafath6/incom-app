@@ -8,6 +8,7 @@ import 'package:incom/controllers/connect_broker/connect_broker.dart';
 import 'package:incom/utils/dimension.dart';
 import 'package:incom/views/authentication_view/connect_with_brocker/broker_item.dart';
 import 'package:incom/views/authentication_view/widgets/sub_title.dart';
+import 'package:incom/views/home_view/home_veiw.dart';
 
 class ConnectWithBroker extends StatelessWidget {
   const ConnectWithBroker({Key? key}) : super(key: key);
@@ -43,11 +44,16 @@ class ConnectWithBroker extends StatelessWidget {
                 alignment: Alignment.centerRight,
                 child: Container(
                   margin: const EdgeInsets.only(right: 30),
-                  child: Text(
-                    'Skip >',
-                    style: GoogleFonts.openSans(
-                      fontSize: 15,
-                      color: AppColors.primaryColor,
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).pushNamed(HomeView.routeName);
+                    },
+                    child: Text(
+                      'Skip >',
+                      style: GoogleFonts.openSans(
+                        fontSize: 15,
+                        color: AppColors.primaryColor,
+                      ),
                     ),
                   ),
                 ),

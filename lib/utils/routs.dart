@@ -4,6 +4,7 @@ import 'package:incom/views/authentication_view/forgot_screen/forgot_screen.dart
 import 'package:incom/views/authentication_view/profile_setup_screen/profile_setup_screen.dart';
 import 'package:incom/views/authentication_view/reset_password/reset_password_screen.dart';
 import 'package:incom/views/authentication_view/verify_otp/verify_otp.dart';
+import 'package:incom/views/home_view/home_veiw.dart';
 import '../views/authentication_view/login_screen/login_screen.dart';
 import '../views/authentication_view/sign_up_screens/signup_screen.dart';
 import '../views/onboarding_view/onboarding_screen.dart';
@@ -26,6 +27,8 @@ class Routes {
       case ConnectWithBroker.routeName:
         return MaterialPageRoute(
             builder: (context) => const ConnectWithBroker());
+      case HomeView.routeName:
+        return MaterialPageRoute(builder: (context) => const HomeView());
       default:
         return MaterialPageRoute(builder: (context) => const OnboardingView());
     }

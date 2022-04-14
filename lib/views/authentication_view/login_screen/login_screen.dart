@@ -7,6 +7,7 @@ import 'package:incom/views/authentication_view/login_screen/footer.dart';
 import 'package:incom/views/authentication_view/profile_setup_screen/profile_setup_screen.dart';
 import 'package:incom/views/authentication_view/widgets/headline.dart';
 import 'package:incom/views/authentication_view/widgets/sub_title.dart';
+import 'package:incom/views/home_view/home_veiw.dart';
 import 'package:incom/views/widgets/custom_button.dart';
 
 import '../widgets/input_box.dart';
@@ -71,8 +72,11 @@ class LoginScreen extends StatelessWidget {
                   const SizedBox(
                     height: 50,
                   ),
-                  const CustomButton(
+                  CustomButton(
                     label: 'Login',
+                    onTap: () {
+                      Navigator.of(context).pushNamed(HomeView.routeName);
+                    },
                   ),
                   const SizedBox(
                     height: 35,
