@@ -6,8 +6,14 @@ extension Dimensions on BuildContext {
   double getWidth(width) => (MediaQuery.of(this).size.width / 100) * width;
 
 // spacing widget
-  SizedBox spacing({double? height = 0, double? width = 0}) => SizedBox(
+  Container spacing({
+    double? height = 0,
+    double? width = 0,
+    Widget? child = const SizedBox(height: 0, width: 0),
+  }) =>
+      Container(
         height: getHeight(height),
         width: getWidth(width),
+        child: child,
       );
 }

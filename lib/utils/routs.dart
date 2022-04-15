@@ -28,7 +28,7 @@ class Routes {
         return MaterialPageRoute(
             builder: (context) => const ConnectWithBroker());
       case HomeView.routeName:
-        return MaterialPageRoute(builder: (context) => const HomeView());
+        return MaterialPageRoute(builder: (context) => HomeView());
       default:
         return MaterialPageRoute(builder: (context) => const OnboardingView());
     }
