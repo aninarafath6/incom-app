@@ -16,7 +16,7 @@ class FavoriteTraders extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverToBoxAdapter(
       child: Container(
-        margin: EdgeInsets.only(
+        margin: const EdgeInsets.only(
           left: AppSizes.defaultPaddings * .60,
         ),
         height: context.getHeight(25),

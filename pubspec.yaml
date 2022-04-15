@@ -28,6 +28,7 @@ flutter:
   assets:
     - assets/images/
     - assets/images/brokers/
+    - assets/images/news/
     - assets/icons/
     - assets/svg/
     - assets/users/

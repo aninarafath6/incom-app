@@ -19,7 +19,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      // width: AppSizes.buttonWidth,
+      width: AppSizes.buttonWidth,
       height: size,
       child: GestureDetector(
         onTap: onTap,

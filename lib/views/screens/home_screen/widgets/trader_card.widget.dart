@@ -27,7 +27,7 @@ class TraderCard extends StatelessWidget {
           CircleAvatar(
             radius: 45,
             backgroundColor: AppColors.primaryColor,
-            backgroundImage: AssetImage(trader.dp!),
+            backgroundImage: AssetImage(trader.dp),
           ),
           const SizedBox(height: 25),
           Text(

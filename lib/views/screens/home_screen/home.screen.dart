@@ -6,7 +6,9 @@ import 'package:incom/constants/app_colors.dart';
 import 'package:incom/constants/app_sizes.dart';
 import 'package:incom/views/home_view/widgets/appbar.dart';
 import 'package:incom/views/screens/home_screen/widgets/favoraite_traders.widget.dart';
+import 'package:incom/views/screens/home_screen/widgets/news_list.widget.dart';
 import 'package:incom/views/screens/home_screen/widgets/status_banner.widget.dart';
+import 'package:incom/views/widgets/subTitle.widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({
@@ -36,23 +38,43 @@ class HomeScreen extends StatelessWidget {
                       const SizedBox(height: 30),
                       const StatusBanner(),
                       const SizedBox(height: 30),
-                      Padding(
-                        padding: const EdgeInsets.symmetric(
+                      const Padding(
+                        padding: EdgeInsets.symmetric(
                           horizontal: AppSizes.defaultPaddings * .60,
                         ),
-                        child: Text(
-                          'Find your favorites traders',
-                          style: GoogleFonts.openSans(
-                            fontSize: 20,
-                            fontWeight: FontWeight.w600,
-                          ),
-                        ),
+                        child: SubTitle2(label: 'Find your favorites traders'),
                       ),
                       const SizedBox(height: 20),
                     ],
                   ),
                 ),
                 FavoriteTraders(),
+                SliverList(
+                  delegate: SliverChildListDelegate(
+                    [
+                      const SizedBox(height: 30),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: AppSizes.defaultPaddings * .60,
+                        ),
+                        child: Row(
+                          children: [
+                            const SubTitle2(label: 'News'),
+                            const Spacer(),
+                            Text(
+                              'See More',
+                              style: GoogleFonts.openSans(
+                                color: Colors.blue,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 30),
+                    ],
+                  ),
+                ),
+                NewsList(),
               ],
             ),
           ),
@@ -61,3 +83,4 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
