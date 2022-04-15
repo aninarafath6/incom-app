@@ -8,17 +8,19 @@ class CustomButton extends StatelessWidget {
   const CustomButton({
     Key? key,
     required this.label,
+    this.size = AppSizes.buttonHeight,
     this.onTap,
   }) : super(key: key);
 
   final String label;
   final Function()? onTap;
+  final double size;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: AppSizes.buttonWidth,
-      height: AppSizes.buttonHeight,
+      // width: AppSizes.buttonWidth,
+      height: size,
       child: GestureDetector(
         onTap: onTap,
         child: Container(

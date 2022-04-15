@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_colors.dart';
 import 'package:incom/constants/app_images.dart';
 import 'package:incom/constants/app_sizes.dart';
+import 'package:incom/views/home_view/widgets/notification_icon.widget.dart';
 
 class HomeAppBar extends StatelessWidget {
   const HomeAppBar({
@@ -38,41 +39,10 @@ class HomeAppBar extends StatelessWidget {
                 width: double.infinity,
                 child: Column(
                   children: [
-                    Align(
-                      alignment: Alignment.centerRight,
-                      child: Stack(
-                        clipBehavior: Clip.none,
-                        children: [
-                          const CircleAvatar(
-                            radius: 25,
-                            backgroundColor: Colors.white,
-                            child: Icon(
-                              Icons.notifications_outlined,
-                              color: Colors.black,
-                            ),
-                          ),
-                          Positioned(
-                            right: -3,
-                            top: -2,
-                            child: CircleAvatar(
-                              radius: 12,
-                              backgroundColor: Colors.redAccent,
-                              child: Text(
-                                '1',
-                                style: GoogleFonts.openSans(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontSize: 10,
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    const NotificationIcon(),
                     Padding(
-                      padding:
-                          const EdgeInsets.only(top: AppSizes.defaultPaddings),
+                      padding: const EdgeInsets.only(
+                          top: AppSizes.defaultPaddings / 2),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
