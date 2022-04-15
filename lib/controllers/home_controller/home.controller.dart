@@ -50,5 +50,19 @@ class HomeController extends GetxController {
       date: '12 jun 2022 ',
       imageURL: 'assets/images/news/nifty.jpeg',
     ),
+    NewsModel(
+      heading:
+          'Nifty and others Fall, but\nBank Nifty helps to recover!- Post Market Report',
+      time: '2',
+      date: '12 jun 2022 ',
+      imageURL: 'assets/images/news/new3.jpeg',
+    ),
+    NewsModel(
+      heading:
+          'Nifty and others Fall, but\nBank Nifty helps to recover!- Post Market Report',
+      time: '2',
+      date: '12 jun 2022 ',
+      imageURL: 'assets/images/news/news4.jpeg',
+    ),
   ];
 }
