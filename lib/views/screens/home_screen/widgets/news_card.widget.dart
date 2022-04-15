@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:incom/constants/app_sizes.dart';
 import 'package:incom/models/news.model.dart';
 import 'package:incom/utils/dimension.dart';
+import 'package:incom/views/widgets/title_with_info.widget.dart';
 
 class NewsCard extends StatelessWidget {
   const NewsCard({
@@ -20,28 +21,7 @@ class NewsCard extends StatelessWidget {
         children: [
           Expanded(
             flex: 2,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  newsModel.heading,
-                  style: GoogleFonts.openSans(
-                    fontWeight: FontWeight.w600,
-                    fontSize: 15,
-                  ),
-                  overflow: TextOverflow.ellipsis,
-                ),
-                const SizedBox(height: 35),
-                Text(
-                  '${newsModel.date} • ${newsModel.time} min ago',
-                  style: GoogleFonts.openSans(
-                    color: Colors.grey,
-                    fontWeight: FontWeight.w500,
-                  ),
-                )
-              ],
-            ),
+            child: TitleWithInfo(information: newsModel.information),
           ),
           const SizedBox(width: 20),
           Expanded(

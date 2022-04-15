@@ -8,10 +8,12 @@ class InputBox extends StatefulWidget {
     required this.placeholder,
     this.keyboard = TextInputType.text,
     this.password = false,
+    this.color = AppColors.inputColor,
   }) : super(key: key);
   final String placeholder;
   final bool password;
   final TextInputType keyboard;
+  final Color color;
 
   @override
   State<InputBox> createState() => _InputBoxState();
@@ -27,7 +29,7 @@ class _InputBoxState extends State<InputBox> {
       width: double.infinity,
       height: 55,
       decoration: BoxDecoration(
-        color: AppColors.inputColor,
+        color: widget.color,
         borderRadius: BorderRadius.circular(30),
       ),
       child: Center(

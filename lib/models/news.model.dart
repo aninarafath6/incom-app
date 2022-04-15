@@ -1,13 +1,11 @@
+import 'package:incom/models/info.model.dart';
+
 class NewsModel {
-  final String heading;
-  final String time;
-  final String date;
+  final Info information;
   final String imageURL;
 
   NewsModel({
-    required this.heading,
-    required this.time,
-    required this.date,
+    required this.information,
     required this.imageURL,
   });
 }
