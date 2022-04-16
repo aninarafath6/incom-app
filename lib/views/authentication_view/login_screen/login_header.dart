@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incom/constants/app_colors.dart';
+import 'package:incom/utils/dimension.dart';
 
 import '../../../constants/app_images.dart';
 
@@ -33,17 +34,17 @@ class LoginHeader extends StatelessWidget {
                   ),
                 ),
               ),
-              radius: 100,
+              radius: context.getWidth(20),
             ),
           ),
           Transform.translate(
             offset: const Offset(-60, 0),
-            child: const CircleAvatar(
+            child: CircleAvatar(
               backgroundColor: Colors.transparent,
-              backgroundImage: AssetImage(
+              backgroundImage: const AssetImage(
                 AppImages.login1,
               ),
-              radius: 125.5,
+              radius: context.getWidth(25),
             ),
           ),
           Transform.translate(
@@ -66,7 +67,7 @@ class LoginHeader extends StatelessWidget {
                     AppImages.slogo,
                   ),
                 ),
-                radius: 65,
+                radius: context.getWidth(15),
               ),
             ),
           ),
