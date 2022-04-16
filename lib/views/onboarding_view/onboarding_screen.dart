@@ -32,16 +32,23 @@ class OnboardingView extends StatelessWidget {
                 },
               ),
               const Spacer(flex: 2),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    'Made in Kerala with ',
-                    style: GoogleFonts.openSans(color: AppColors.primaryColor),
-                  ),
-                  SvgPicture.asset(AppImages.hartSvg),
-                ],
+              Container(
+                margin: EdgeInsets.only(
+                  bottom:
+                      Theme.of(context).platform == TargetPlatform.iOS ? 0 : 8,
+                ),
+                child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      'Made in Kerala with ',
+                      style:
+                          GoogleFonts.openSans(color: AppColors.primaryColor),
+                    ),
+                    SvgPicture.asset(AppImages.hartSvg),
+                  ],
+                ),
               ),
             ],
           ),
