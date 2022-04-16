@@ -15,6 +15,7 @@ class DiscoverAppBar extends StatelessWidget {
     return SliverAppBar(
       automaticallyImplyLeading: false, // Don't show the leading button
       backgroundColor: Colors.white,
+      elevation: 0,
       toolbarHeight: 80,
       expandedHeight: context.getHeight(43),
       pinned: true,
