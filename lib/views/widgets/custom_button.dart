@@ -9,12 +9,14 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.label,
     this.size = AppSizes.buttonHeight,
+    this.inverted = false,
     this.onTap,
   }) : super(key: key);
 
   final String label;
   final Function()? onTap;
   final double size;
+  final bool inverted;
 
   @override
   Widget build(BuildContext context) {
@@ -24,16 +26,19 @@ class CustomButton extends StatelessWidget {
       child: GestureDetector(
         onTap: onTap,
         child: Container(
+          width: AppSizes.buttonWidth,
+          height: size,
           decoration: BoxDecoration(
-            color: AppColors.primaryColor,
+            color: inverted ? Colors.transparent : AppColors.primaryColor,
             borderRadius: BorderRadius.circular(30),
+            border: Border.all(color: Colors.blueAccent),
           ),
           child: Center(
             child: Text(
               label,
               style: GoogleFonts.openSans(
                 fontWeight: FontWeight.w700,
-                color: AppColors.light,
+                color: inverted ? AppColors.primaryColor : AppColors.light,
                 fontSize: 18,
               ),
             ),

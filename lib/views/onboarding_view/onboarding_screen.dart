@@ -1,12 +1,4 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:google_fonts/google_fonts.dart';
-import 'package:incom/constants/app_colors.dart';
-import 'package:incom/constants/app_images.dart';
-import 'package:incom/constants/app_sizes.dart';
-
-import '../authentication_view/login_screen/login_screen.dart';
-import '../widgets/custom_button.dart';
+import 'package:incom/views/onboarding_view/onboarding.index.dart';
 
 class OnboardingView extends StatelessWidget {
   const OnboardingView({Key? key}) : super(key: key);

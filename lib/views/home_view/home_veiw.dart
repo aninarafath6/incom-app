@@ -1,9 +1,5 @@
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:incom/controllers/tab_bar_controller/tab_bar.controller.dart';
-import 'package:incom/views/screens/discovery_screen/discovery.screen.dart';
-import 'package:incom/views/screens/home_screen/home.screen.dart';
-import 'package:incom/views/home_view/widgets/bottom_navigation.dart';
+
+import 'home_view.index.dart';
 
 class HomeView extends StatelessWidget {
   HomeView({Key? key}) : super(key: key);
@@ -13,7 +9,7 @@ class HomeView extends StatelessWidget {
   final List<Widget> pages = [
     DiscoveryScreen(),
     const HomeScreen(),
-    const Icon(Icons.directions_bike),
+    const ProfileScreen(),
   ];
 
   @override
