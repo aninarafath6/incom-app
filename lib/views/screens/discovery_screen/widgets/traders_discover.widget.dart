@@ -5,19 +5,18 @@ import 'package:incom/controllers/home_controller/home.controller.dart';
 import 'package:incom/views/screens/discovery_screen/widgets/trader_avatar.widget.dart';
 
 class TradersDiscover extends StatelessWidget {
-  const TradersDiscover({
+  TradersDiscover({
     Key? key,
-    required this.homeController,
   }) : super(key: key);
 
-  final HomeController homeController;
+  final HomeController homeController = HomeController();
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(AppSizes.defaultPaddings * .30),
       margin: const EdgeInsets.symmetric(
-        horizontal: AppSizes.defaultPaddings,
+        // horizontal: AppSizes.defaultPaddings,
         vertical: 20,
       ),
       width: double.infinity,
