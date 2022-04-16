@@ -13,11 +13,12 @@ class ProfileAppBar extends StatelessWidget {
     return SliverAppBar(
       snap: true,
       automaticallyImplyLeading: false, // Don't show the leading button
-      expandedHeight: context.getHeight(62),
+      expandedHeight: 500,
       backgroundColor: AppColors.primaryColor,
       title: const Text('Profile'),
       pinned: true,
       floating: true,
+      centerTitle: true,
       // leading: const SizedBox(),
       flexibleSpace: FlexibleSpaceBar(
         background: Stack(

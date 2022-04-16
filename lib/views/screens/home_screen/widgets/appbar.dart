@@ -11,6 +11,7 @@ class HomeAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return SliverAppBar(
       automaticallyImplyLeading: false, // Don't show the leading button
+      centerTitle: true,
 
       expandedHeight: context.getHeight(28),
       backgroundColor: AppColors.primaryColor,
