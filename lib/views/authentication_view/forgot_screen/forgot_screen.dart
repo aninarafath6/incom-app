@@ -20,7 +20,7 @@ class ForgotScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.symmetric(
             horizontal: AppSizes.defaultPaddings,
-            vertical: 10,
+            vertical: 20,
           ),
           child: SizedBox(
             width: double.infinity,
