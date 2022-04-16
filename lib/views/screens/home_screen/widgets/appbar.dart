@@ -14,7 +14,8 @@ class HomeAppBar extends StatelessWidget {
       backgroundColor: AppColors.primaryColor,
       leading: const SizedBox(),
       pinned: true,
-      snap: false,
+      // snap: true,
+      // floating: true,
       flexibleSpace: FlexibleSpaceBar(
         background: Stack(
           children: [
