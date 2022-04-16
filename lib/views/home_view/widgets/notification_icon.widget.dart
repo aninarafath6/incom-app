@@ -8,36 +8,39 @@ class NotificationIcon extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Align(
-      alignment: Alignment.centerRight,
-      child: Stack(
-        clipBehavior: Clip.none,
-        children: [
-          const CircleAvatar(
-            radius: 25,
-            backgroundColor: Colors.white,
-            child: Icon(
-              Icons.notifications_outlined,
-              color: Colors.black,
+    return Padding(
+      padding: const EdgeInsets.only(right: 18.0, bottom: 10),
+      child: Align(
+        alignment: Alignment.centerRight,
+        child: Stack(
+          clipBehavior: Clip.none,
+          children: [
+            const CircleAvatar(
+              radius: 22,
+              backgroundColor: Colors.white,
+              child: Icon(
+                Icons.notifications_outlined,
+                color: Colors.black,
+              ),
             ),
-          ),
-          Positioned(
-            right: -3,
-            top: -2,
-            child: CircleAvatar(
-              radius: 12,
-              backgroundColor: Colors.redAccent,
-              child: Text(
-                '1',
-                style: GoogleFonts.openSans(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 10,
+            Positioned(
+              right: -3,
+              top: -2,
+              child: CircleAvatar(
+                radius: 10,
+                backgroundColor: Colors.redAccent,
+                child: Text(
+                  '1',
+                  style: GoogleFonts.openSans(
+                    color: Colors.white,
+                    fontWeight: FontWeight.bold,
+                    fontSize: 10,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
