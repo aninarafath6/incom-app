@@ -9,7 +9,7 @@ class NotificationIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 18.0, bottom: 10),
+      padding: const EdgeInsets.only(right: 18.0, bottom: 0),
       child: Align(
         alignment: Alignment.centerRight,
         child: Stack(
