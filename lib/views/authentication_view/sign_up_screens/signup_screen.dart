@@ -31,14 +31,17 @@ class SignUpScreen extends StatelessWidget {
           child: SizedBox(
             width: double.infinity,
             height: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
+            child: ListView(
+              // crossAxisAlignment: CrossAxisAlignment.center,
+
               children: [
                 const Spacer(),
-                const SizedBox(height: 25),
+                const SizedBox(height: 50),
                 const SignUpHeader(),
-                const SizedBox(height: 40),
-                const SubTitle(title: 'Signup'),
+                const SizedBox(height: 50),
+               const Align(
+                  child:  SubTitle(title: 'Signup'),
+                ),
                 const SizedBox(
                   height: 40,
                 ),
@@ -62,7 +65,8 @@ class SignUpScreen extends StatelessWidget {
                 const SizedBox(
                   height: 35,
                 ),
-                const _Footer()
+                const _Footer(),
+                Spacer(),
               ],
             ),
           ),

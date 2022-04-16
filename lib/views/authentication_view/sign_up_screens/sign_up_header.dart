@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:incom/constants/app_colors.dart';
+import 'package:incom/utils/dimension.dart';
 
 import '../../../constants/app_images.dart';
 
@@ -33,7 +34,7 @@ class SignUpHeader extends StatelessWidget {
                   ),
                 ),
               ),
-              radius: 100,
+              radius: context.getWidth(20),
             ),
           ),
           Transform.translate(
@@ -48,7 +49,7 @@ class SignUpHeader extends StatelessWidget {
                 color: Color.fromARGB(139, 136, 96, 166),
                 borderRadius: BorderRadius.circular(125.5),
               )),
-              radius: 125.5,
+              radius: context.getWidth(25),
             ),
           ),
           Transform.translate(
@@ -71,7 +72,7 @@ class SignUpHeader extends StatelessWidget {
                     AppImages.slogo,
                   ),
                 ),
-                radius: 65,
+                radius: context.getWidth(15),
               ),
             ),
           ),
@@ -80,5 +81,3 @@ class SignUpHeader extends StatelessWidget {
     );
   }
 }
-
-
