@@ -18,58 +18,61 @@ class ResetPassword extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(
-              horizontal: AppSizes.defaultPaddings, vertical: 20),
-          child: SizedBox(
-            width: double.infinity,
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                const Align(
-                  alignment: Alignment.centerLeft,
-                  child: Headline(size: 40, label: 'Password\nReset'),
-                ),
-                context.spacing(height: 10),
-                Image.asset(
-                  AppImages.verifyIcon,
-                  width: 140,
-                ),
-                context.spacing(height: 5),
-                const SubTitle(title: 'Enter New Password'),
-                context.spacing(height: 3),
-                const InputBox(
-                  placeholder: 'New Password',
-                  password: true,
-                ),
-                const InputBox(
-                  placeholder: 'Re-enter Password',
-                  password: true,
-                ),
-                context.spacing(height: 5),
-                const CustomButton(label: 'Confirm'),
-                context.spacing(height: 5),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Text(
-                      'Remember password ? ',
-                      style: GoogleFonts.openSans(color: AppColors.brownShade),
-                    ),
-                    GestureDetector(
-                      onTap: () => Navigator.of(context)
-                          .pushNamed(LoginScreen.routeName),
-                      child: Text(
-                        'Login ',
-                        style: GoogleFonts.openSans(
-                          color: AppColors.primaryColor,
-                          fontSize: 14,
+        child: SingleChildScrollView(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: AppSizes.defaultPaddings, vertical: 20),
+            child: SizedBox(
+              width: double.infinity,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  const Align(
+                    alignment: Alignment.centerLeft,
+                    child: Headline(size: 40, label: 'Password\nReset'),
+                  ),
+                  context.spacing(height: 10),
+                  Image.asset(
+                    AppImages.verifyIcon,
+                    width: 140,
+                  ),
+                  context.spacing(height: 5),
+                  const SubTitle(title: 'Enter New Password'),
+                  context.spacing(height: 3),
+                  const InputBox(
+                    placeholder: 'New Password',
+                    password: true,
+                  ),
+                  const InputBox(
+                    placeholder: 'Re-enter Password',
+                    password: true,
+                  ),
+                  context.spacing(height: 5),
+                  const CustomButton(label: 'Confirm'),
+                  context.spacing(height: 5),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        'Remember password ? ',
+                        style:
+                            GoogleFonts.openSans(color: AppColors.brownShade),
+                      ),
+                      GestureDetector(
+                        onTap: () => Navigator.of(context)
+                            .pushNamed(LoginScreen.routeName),
+                        child: Text(
+                          'Login ',
+                          style: GoogleFonts.openSans(
+                            color: AppColors.primaryColor,
+                            fontSize: 14,
+                          ),
                         ),
                       ),
-                    ),
-                  ],
-                ),
-              ],
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ),
