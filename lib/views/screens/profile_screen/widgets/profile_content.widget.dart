@@ -15,7 +15,7 @@ class ProfileContent extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       color: Colors.transparent,
       width: double.infinity,
-      height: context.getHeight(40),
+      // height: context.getHeight(40),
       child: Column(
         children: [
           const CircleAvatar(
