@@ -11,10 +11,12 @@ class ProfileAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      snap: true,
       expandedHeight: context.getHeight(51),
       backgroundColor: AppColors.primaryColor,
       title: const Text('Profile'),
       pinned: true,
+      floating: true,
       flexibleSpace: FlexibleSpaceBar(
         background: Stack(
           clipBehavior: Clip.none,
