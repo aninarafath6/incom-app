@@ -15,9 +15,9 @@ class TradersDiscover extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(AppSizes.defaultPaddings * .30),
-      margin: const EdgeInsets.symmetric(
+      margin: const EdgeInsets.only(
         // horizontal: AppSizes.defaultPaddings,
-        vertical: 20,
+        top: 10,
       ),
       width: double.infinity,
       height: 112,

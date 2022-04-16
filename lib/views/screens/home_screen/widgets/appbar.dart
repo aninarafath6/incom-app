@@ -10,9 +10,11 @@ class HomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SliverAppBar(
+      automaticallyImplyLeading: false, // Don't show the leading button
+
       expandedHeight: context.getHeight(28),
       backgroundColor: AppColors.primaryColor,
-      leading: const SizedBox(),
+      // leading: const SizedBox(),
       pinned: true,
       // snap: true,
       // floating: true,

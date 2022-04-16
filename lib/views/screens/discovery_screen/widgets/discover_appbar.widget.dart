@@ -17,7 +17,7 @@ class DiscoverAppBar extends StatelessWidget {
       backgroundColor: Colors.white,
       elevation: 0,
       toolbarHeight: 80,
-      expandedHeight: context.getHeight(43),
+      expandedHeight: context.getHeight(44),
       pinned: true,
       // floating: true,
       centerTitle: false,
