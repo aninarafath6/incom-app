@@ -23,15 +23,16 @@ class ProfileSetup extends StatelessWidget {
             child: Transform.translate(
               offset: const Offset(0, -100),
               child: Padding(
-                padding: const EdgeInsets.all(AppSizes.defaultPaddings),
-                child: Column(
+                padding: const EdgeInsets.symmetric(
+                    horizontal: AppSizes.defaultPaddings),
+                child: ListView(
                   children: [
                     context.spacing(height: 3),
                     const SubTitle(title: 'Complete your profile'),
-                    context.spacing(height: 8),
+                    context.spacing(height: 5),
                     const InputBox(placeholder: 'Name'),
                     const InputBox(placeholder: 'Email ID'),
-                    context.spacing(height: 7),
+                    context.spacing(height: 5),
                     CustomButton(
                       label: 'Next',
                       onTap: () => Navigator.of(context).pushNamed(

@@ -25,7 +25,8 @@ class ProfileAppBar extends StatelessWidget {
             ),
           ),
           Image.asset(AppImages.profileAppBar, fit: BoxFit.cover),
-          Center(
+          Align(
+            alignment: Alignment.center,
             child: Image.asset(
               AppImages.avatar,
               width: 170,
